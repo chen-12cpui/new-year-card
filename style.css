@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.greeting-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #e60012;
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    perspective: 1000px;
+}
+
+.rotating-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: rotate3D 10s infinite linear;
+}
+
+.person-name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #e60012;
+    font-weight: bold;
+}
+
+.greeting-text {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.greeting-text p {
+    margin: 10px 0;
+}
+
+@keyframes rotate3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .greeting-card {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 36px;
+    }
+    
+    .photo-container {
+        width: 150px;
+        height: 150px;
+    }
+} 
